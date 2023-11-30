@@ -1,0 +1,48 @@
+.loader {
+  position: fixed;
+  top: 58%;
+  left: 65%;
+  width: 56px;
+  height: 56px;
+  animation: spinner-x0t3la 3s infinite linear;
+}
+
+.loader::before {
+  content: "";
+  display: block;
+  height: 56px;
+  width: 11.2px;
+  animation: spinner-x0t3la 0.5s infinite;
+  background: rgba(249, 145, 0, 0.665);
+  position: absolute;
+  left: 50%;
+  margin-left: -5.6px;
+}
+
+@keyframes spinner-x0t3la {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 900px) {
+}
+
+/* Adjust width to fit the medium screen */
+
+@media only screen and (min-width: 600px) and (max-width: 1122px) {
+  .loader {
+    position: absolute;
+    bottom: 50%;
+    left: 75%;
+  }
+}
+
+/* Adjust width to fit the medium-large screen */
+
+@media only screen and (min-width: 1122px) AND (max-width: 1616px) {
+  .loader {
+    position: absolute;
+    bottom: 50%;
+    left: 70%;
+  }
+}

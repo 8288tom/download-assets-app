@@ -1,0 +1,132 @@
+.data-table-container {
+  display: flex;
+  justify-content: center;
+  width: 1906px;
+  overflow-x: hidden;
+}
+.data-grid-header {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  border-radius: 2%;
+  height: 79px;
+  background-color: #205295;
+}
+.data-table {
+  background-color: #f4c0a272;
+  height: 600px;
+  max-width: 80%;
+  width: 80%;
+  overflow-x: hidden;
+  box-sizing: border-box; /* Make sure padding and borders are included in the width */
+}
+
+.data-table .MuiDataGrid-root .MuiDataGrid-window {
+  overflow-x: hidden !important;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; /* Align the top button of each group on the same line */
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.back-buttons,
+.action-buttons {
+  transition: background-color 300ms;
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  gap: 1rem;
+}
+.action-buttons {
+  margin-left: 42rem;
+}
+.action-buttons Button {
+  color: black;
+}
+
+.action-buttons Button:hover {
+  background-color: #c2dedc;
+}
+.back-buttons Button:hover {
+  background-color: #a3c7d6;
+}
+.fileTypeContainer {
+  display: flex;
+  align-items: center;
+}
+
+.fileTypeText {
+  max-width: 100px; /* Or whatever max width you want */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Adjust width to fit the smaller screen */
+@media only screen and (max-width: 600px) {
+  .data-table-container {
+    width: 100%;
+  }
+  .data-grid-header {
+    width: 80%;
+  }
+
+  .data-table {
+    width: 100%;
+  }
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-buttons,
+  .back-buttons {
+    margin-left: 0.5rem; /* Adjust margin-left for medium screens */
+    margin-top: 0.5rem;
+  }
+}
+/* Adjust width to fit the medium-large screen */
+
+/* Adjust width to fit the medium screen */
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .data-table-container {
+    width: 100%;
+  }
+  .data-grid-header {
+    width: 80%;
+  }
+  .data-table {
+    width: 95%; /* Slightly less than 100% for a little margin on medium screens */
+  }
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .action-buttons,
+  .back-buttons {
+    margin-left: 1rem; /* Adjust margin-left for medium screens */
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) AND (max-width: 2100px) {
+  .data-table-container {
+    width: 100%;
+  }
+  .data-grid-header {
+    width: 80%;
+  }
+  .data-table {
+    width: 95%; /* Slightly less than 100% for a little margin on medium screens */
+  }
+  .action-buttons,
+  .back-buttons {
+    /* Adjust margin-left for medium screens */
+    margin-top: 0.5rem;
+  }
+}

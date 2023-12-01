@@ -11,4 +11,8 @@ COPY . .
 
 RUN npm run build
 
-# The app's build files are in /app/build
+# Install 'serve' to serve the static files
+RUN npm install -g serve
+
+# Serve the application on port 80
+CMD serve -s build -l 80

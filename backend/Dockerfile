@@ -26,5 +26,8 @@ ENV PORT=5069
 # Expose the port the app runs on
 EXPOSE 5069
 
+# Override the entrypoint
+ENTRYPOINT []
+
 # Run your application
 CMD ["npm", "start"]

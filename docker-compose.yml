@@ -1,13 +1,19 @@
 version: "3"
 services:
   frontend:
-    build: ./frontend
-    ports:
-      - "5070:80" # Maps port 80 in the container to 5070 on the host
-    restart: always
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    networks:
+      - download-assets-network
 
   backend:
-    build: ./backend
-    ports:
-      - "5069:5069"
-    restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    networks:
+      - download-assets-network
+
+networks:
+  download-assets-network:
+    driver: bridge
